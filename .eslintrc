@@ -12,6 +12,12 @@
   ],
   "rules": {
     "no-console": 1,
-    "prettier/prettier": 2
+    "prettier/prettier": 2,
+    "@typescript-eslint/interface-name-prefix" : "off"
+  },
+  "env": {
+    // "browser": true,
+    "node": true,
+    "es6": true
   }
 }

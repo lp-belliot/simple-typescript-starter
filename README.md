@@ -15,3 +15,14 @@ Builds the app at `build`, cleaning the folder first.
 #### `npm run start`
 
 Starts the app in production by first building the project with `npm run build`, and then executing the compiled JavaScript at `build/index.js`.
+
+
+# Domain Structure
+## Player - Aggregate Root
+Contains logic about which entity you can play cards from.
+### Hand - CardCollection Entity
+If you're on the deck and end your turn on less than 3 cards you have to pick up from the deck.
+### FaceDown - CardCollection Entity
+Can't access facedown until faceup and hand are empty.
+### FaceUp - CardCollection Entity
+Can't access faceup until hand is empty or faceup card can be played with last hand card.
